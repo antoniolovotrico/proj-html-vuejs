@@ -2,7 +2,7 @@
 
 // 1 - Analizzare lo screenshot ricevuto e riprodurre il layout base del sito in html. 
 
-// 2 - Una volta invividuate le macro-sezioni iniziare a lavorare su ognuna di essa dalla navbar al footer(Navbar e Foote devono essere riempite dalle opzioni data in un istanza vueJs che dinamicamente li passerà all'html).
+// 2 - Una volta invividuate le macro-sezioni iniziare a lavorare su ognuna di essa dalla navbar al footer(Navbar e Footer devono essere riempite dalle opzioni data in un istanza vueJs che dinamicamente li passerà all'html).
 
 // 3 - Inizializzare quindi una nuova istanza vue fornendo in data le opzioni necessarie ed eventuali metodi. 
 

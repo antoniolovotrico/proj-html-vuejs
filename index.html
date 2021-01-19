@@ -20,14 +20,18 @@
             <header>
                 <!-- navbar -->
                 <div class="navbar d_flex">
-                    <img src="assets/img/dark_logo.png" alt="">
+                    <img id="logo" src="assets/img/dark_logo.png" alt="">
 
                     <nav class="nav_menu d_flex">
 
                     </nav>
+                    <i class="fas fa-cart-plus"></i>
+                    <i class="far fa-user-circle"></i>
 
                     <form class="search">
-                        <input type="text" v-model="search">   
+                        <input type="text" placeholder="Search..." v-model="search">
+                        <i class="fas fa-search"></i> 
+                          
                     </form>
                 </div>
                 <!-- //navbar -->

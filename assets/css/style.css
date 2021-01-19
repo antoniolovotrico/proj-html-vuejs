@@ -6,76 +6,121 @@
 }
 
 /* Utility */
+body{
+    font-family: "lato";
+}
 .d_flex{
 display: flex;
 }
-
+header{
+    background-color: #f0efef;
+}
 
 /* navbar */
 .navbar{
-    width: 100vw;
+    width: 1080px;
     height: 100px;
-    background-color: brown;
+    margin: auto;
+    background-color: #f0efef;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_menu{
+    width: 500px;
+    height: 50px;
+    background-color: cadetblue;
+}
+#logo{
+    width: 150px;
+    margin-right: 80px;
+}
+input{
+    border: 1px solid white;
+    height: 42px;
+    width: 170px;
+    border-radius: 5px;
+    color: #f0efef;
+    padding: 0 20px;
+    font-size: 1rem;
+}
+input:focus {
+    outline: none;
+    border:1px solid white;  
+}
+.fa-search{
+    position: sticky;
+    top: 0;
+    right: 20%;
+    color: #22ad96;
 }
 
 /* hero section */
 .hero_overlay{
-    width: 100vw;
+    width: 1080px;
+    margin:auto;
     height: 500px;
     background-color:blue;
 }
 
 /* skill section */
 .main_skill_container{
-    width: 100vw;
+    width: 1080px;
+    margin:auto;
     height: 500px;
     background-color:green;
 
 }
 /* quality section */
 .main_quality_container{
-    width: 100vw;
+    width: 1080px;
+    margin:auto;
     height: 500px;
     background-color:yellow;
 }
 
 /* data section */
 .data_row{
-    width: 100vw;
+    width: 1028px;
+    margin:auto;
     height: 200px;
     background-color:grey;
 }
 
 /* courses section */
 .main_courses_container{
-    width: 100vw;
+    width: 1080px;
+    margin:auto;
     height: 500px;
     background-color:black;
 }
 
 /* learning section */
 .learning_container{
-    width: 100vw;
+    width: 1080px;
+    margin:auto;
     height: 500px;
     background-color:pink;
 }
 
 /* events section */
 .main_events_container{
-    width: 100vw;
+    width: 1080px;
+    margin:auto;
     height: 500px;
     background-color:orange;
 }
 
 /* testimonial section */
 .main_testimonial_container{
-    width: 100vw;
+    width: 1080px;
+    margin:auto;
     height: 500px;
     background-color:olive;
 }
 
 footer{
-    width: 100vw;
+    width: 1080px;
+    margin:auto;
     height: 500px;
     background-color:azure;
 }
