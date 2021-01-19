@@ -1,0 +1,81 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utility */
+.d_flex{
+display: flex;
+}
+
+
+/* navbar */
+.navbar{
+    width: 100vw;
+    height: 100px;
+    background-color: brown;
+}
+
+/* hero section */
+.hero_overlay{
+    width: 100vw;
+    height: 500px;
+    background-color:blue;
+}
+
+/* skill section */
+.main_skill_container{
+    width: 100vw;
+    height: 500px;
+    background-color:green;
+
+}
+/* quality section */
+.main_quality_container{
+    width: 100vw;
+    height: 500px;
+    background-color:yellow;
+}
+
+/* data section */
+.data_row{
+    width: 100vw;
+    height: 200px;
+    background-color:grey;
+}
+
+/* courses section */
+.main_courses_container{
+    width: 100vw;
+    height: 500px;
+    background-color:black;
+}
+
+/* learning section */
+.learning_container{
+    width: 100vw;
+    height: 500px;
+    background-color:pink;
+}
+
+/* events section */
+.main_events_container{
+    width: 100vw;
+    height: 500px;
+    background-color:orange;
+}
+
+/* testimonial section */
+.main_testimonial_container{
+    width: 100vw;
+    height: 500px;
+    background-color:olive;
+}
+
+footer{
+    width: 100vw;
+    height: 500px;
+    background-color:azure;
+}
