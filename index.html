@@ -23,6 +23,10 @@
                     <img id="logo" src="assets/img/dark_logo.png" alt="">
 
                     <nav class="nav_menu d_flex">
+                        <ul class="menu_list d_flex" v-for="voice in menu">
+                            <li class="voice_menu"><a href="">{{voice.voice}}<i class="fas fa-chevron-down"></i></a></li>
+                            
+                        </ul>
 
                     </nav>
                     <i class="fas fa-cart-plus"></i>

@@ -11,3 +11,17 @@
 // 5 - Una volta completato il progetto inizia la fase di perfezionamento del codice css al fine di una visualizzazione il più fedele possibile all'originale. 
 
 // 6 - eseguire refactoring e migliorare i commenti.
+
+let app = new Vue ({
+    el:"#app",
+    data:{
+        menu:[
+            {voice:"home"},
+            {voice:"pages"},
+            {voice:"courses"},
+            {voice:"features"},
+            {voice:"blog"},
+            {voice:"shop"},
+        ]
+    }
+})
