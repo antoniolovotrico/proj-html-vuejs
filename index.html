@@ -85,7 +85,7 @@
                     </div>
                 </section>
                 <!--//skills section -->
-
+               
                 <!-- quality section -->
                 <section>
                     <div class="main_quality_container d_flex">
@@ -96,30 +96,24 @@
                         <div class="title_section d_flex">
                             <h5 class="common_title_h5"> Dream with <b>maxcoach</b></h5>
                             <h2 class="common_title_h2">Construct A <b> Stunning</b> Career Perspective</h2>
-
-                            <div :class="visib?'block_unactive d_flex':'block_active d-flex'" v-for="(opt,i) in quality">
-                                <h4 class="d_flex">{{opt.title}}<i v-if="visib" class="fas fa-plus-circle" @click="showFunc(i)"></i><i v-else class="fas fa-minus-circle" @click="hideFunc(i)"></i></h4> 
-                                <p v-show="popi" class="d_flex">{{opt.overview}}</p> 
+                            
+                            <div :class="gogi[i]?'block_active d_flex':'block_unactive d-flex'" v-for="(item,i) in quality">
+                                <h4 class="d_flex">{{quality[i].title}}<i v-if="gogi[i]" class="fas fa-minus-circle" @click="hideFunc(i)"></i><i v-else class="fas fa-plus-circle" @click="showFunc(i)"></i></h4> 
+                                <p v-show="gogi[i]" class="d_flex">{{quality[i].overview}}</p> 
          
-                            </div>
-                            
-                            
-                            
-                            <!-- <div :class="visib?'block_active d_flex':'block_unactive d-flex'" v-for="(opt,i) in quality">
-                                <h4 class="d_flex">{{opt.title}}<i class="fas fa-plus-circle" @click="showFunc(i)"></i></h4>
-                            </div> -->
+                            </div>   
                         </div>
                     </div>
                 </section>
                 <!-- //quality section -->
 
                 <!-- data section -->
-                <section>
+                <section id="data_section">
                     <div class="data_row d_flex">
-                        <div class="data_card"></div>
-                        <div class="data_card"></div>
-                        <div class="data_card"></div>
-                        <div class="data_card"></div>
+                        <div class="data_card d_flex" v-for="info in dataSection">
+                            <h2>{{info.num}}</h2>
+                            <h4>{{info.desc}}</h4>
+                        </div>
                     </div>
                 </section>
                 <!-- //data section -->

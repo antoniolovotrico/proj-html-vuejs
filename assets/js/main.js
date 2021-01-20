@@ -15,6 +15,7 @@
 let app = new Vue ({
     el:"#app",
     data:{
+        gogi:[false,false,false],
         visib: true,
         popi : false,
         menu:[
@@ -47,7 +48,7 @@ let app = new Vue ({
                 overview: "Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness."
             }   
         ],
-        qualIndex : null,
+        qualIndex : "0",
         quality:[
             {   
                 hide: true,
@@ -64,20 +65,42 @@ let app = new Vue ({
                 title: "Track Study Progress & Deliver Prompt Feedback",
                 overview: "Learners are encouraged to study the mechanism and structure of system administration."
             }
+        ],
+        dataSection:[
+            {
+                num:"1.926",
+                desc:"finished session",
+            },
+            {
+                num:"3.092+",
+                desc:"enrolled leaners",
+            },
+            {
+                num:"200",
+                desc:"online instructors",
+            },
+            {
+                num:"100%",
+                desc:"satisfaction rate",
+            }
         ]
     },
     methods:{
         showFunc:function(i){
-            this.qualIndex = i;
-            this.visib = false;
-            this.popi = true;
-            console.log(this.qualIndex);
+            // this.qualIndex = i;
+            // this.visib = false;
+            // this.popi = true;
+            // console.log(this.qualIndex);
+
+            this.$set(this.gogi,i,true)
             
         },
         hideFunc:function(i){
-            this.qualIndex = i;
-            this.visib = true;
-            this.popi = false;
+            // this.qualIndex = i;
+            // this.visib = true;
+            // this.popi = false;
+
+            this.$set(this.gogi,i,false)
             
         }
         
