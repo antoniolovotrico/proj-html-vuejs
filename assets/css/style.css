@@ -75,31 +75,108 @@ input:focus {
 
 /* hero section */
 .hero_overlay{
-    width: 1080px;
+    width: 100vw;
     margin:auto;
-    height: 500px;
-    background-color:blue;
+    height: 400px;
+    background-image: url(../img/section1_overlay.svg);
+    transform: scaleY(-1);
+    margin-top: 200px; 
+    justify-content: center;  
 }
+.hero_area{
+    width: 1080px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    transform: scaleY(-1);
+}
+.title_hero{
+    height: 550px;
+    width: 350px;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 200px;  
+
+}
+.title_hero h1{
+    font-size: 2.7rem;
+    color: #513e5e;
+}
+.title_hero h4{
+    font-size: 1rem;
+    color: #513e5e;
+    font-weight: 500;
+    line-height: 25px;
+}
+.down_btn{
+    height: 40px;
+    width: 220px;
+    border-radius: 5px;
+    border: #22ad96;
+    background-color: #22ad96;
+    color: white;
+    font-weight: 700;
+}
+
+.fa-download{
+    margin-right: 10px;
+}
+.img_hero{
+    height: 550px;
+    padding-bottom: 50px;   
+}
+
+.toggle{
+    position: sticky;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    height: 140px;
+    width: 35px;
+    transform: scaleY(-1);
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+    color: #513e5e;
+    border-radius: 5px;
+} 
 
 /* skill section */
 .main_skill_container{
     width: 1080px;
     margin:auto;
-    height: 500px;
-    background-color:green;
+    height: 600px;
+    
+}
+.title_container{
+    height: 200px;
 
 }
+.title_container h5{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 50px;
+    color: grey;
+    font-weight: 400;
+}
+.title_container h2{
+    font-size: 2.6rem;
+}
+.double_color{
+    justify-content: center;
+}
+
 /* quality section */
 .main_quality_container{
     width: 1080px;
     margin:auto;
-    height: 500px;
-    background-color:yellow;
+    height: 600px;
+    background-color:green;
 }
 
 /* data section */
 .data_row{
-    width: 1028px;
+    width: 1080px;
     margin:auto;
     height: 200px;
     background-color:grey;
@@ -109,7 +186,7 @@ input:focus {
 .main_courses_container{
     width: 1080px;
     margin:auto;
-    height: 500px;
+    height: 600px;
     background-color:black;
 }
 
@@ -117,7 +194,7 @@ input:focus {
 .learning_container{
     width: 1080px;
     margin:auto;
-    height: 500px;
+    height: 600px;
     background-color:pink;
 }
 
@@ -125,7 +202,7 @@ input:focus {
 .main_events_container{
     width: 1080px;
     margin:auto;
-    height: 500px;
+    height: 600px;
     background-color:orange;
 }
 
@@ -133,7 +210,7 @@ input:focus {
 .main_testimonial_container{
     width: 1080px;
     margin:auto;
-    height: 500px;
+    height: 600px;
     background-color:olive;
 }
 
