@@ -21,7 +21,7 @@
                 
                 <!-- navbar -->
                 <div class="navbar d_flex">
-                    <img id="logo" src="assets/img/dark_logo.png" alt="">
+                    <a href=""><img id="logo" src="assets/img/dark_logo.png" alt=""></a>
 
                     <nav class="nav_menu d_flex">
                         <ul class="menu_list d_flex" v-for="voice in menu">
@@ -30,12 +30,12 @@
                         </ul>
 
                     </nav>
-                    <i class="fas fa-cart-plus"></i>
-                    <i class="far fa-user-circle"></i>
+                    <a href=""><i class="fas fa-cart-plus"></i></a>
+                    <a href=""><i class="far fa-user-circle"></i></a>
 
                     <form class="search">
-                        <input type="text" placeholder="Search..." v-model="search">
-                        <i class="fas fa-search"></i> 
+                        <input type="text" placeholder="Search...">
+                        <a href=""><i class="fas fa-search"></i></a> 
                           
                     </form>
                 </div>
@@ -47,7 +47,7 @@
                         <div class="title_hero d_flex">
                             <h1>Complete Your Dreams in JavaS Programming</h1>
                             <h4>Learn any coding program in distance and for a resonable fee. You dont'have to struggle alone, you've got our assistance and help.</h4>
-                            <button class="down_btn"><i class="fas fa-download"></i>Download free E-book</button>
+                            <a href=""><button class="down_btn"><i class="fas fa-download"></i>Download free E-book</button></a>
 
                         </div>
                         <div class="half_pg_picture">
@@ -55,10 +55,10 @@
                         </div>
                     </div>
                     <div class="toggle d_flex">
-                        <i class="fas fa-ruler-combined"></i>
-                        <i class="far fa-futbol"></i>
-                        <i class="fas fa-book"></i>
-                        <i class="fas fa-shopping-cart"></i>
+                        <a href=""><i class="fas fa-ruler-combined"></i></a>
+                        <a href=""><i class="far fa-futbol"></i></a>
+                        <a href=""><i class="fas fa-book"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
                 <!-- //hero section -->
@@ -68,11 +68,10 @@
                 <!-- skills section -->
                 <section>
                     <div class="main_skill_container ">
-                        <div class="title_container">
-                            <h5>Start learling code coding languages</h5>
+                        <div class="title_container d_flex">
+                            <h5 class="common_title_h5"> Start learling code coding languages</h5>
                             <div class="double_color d_flex">
-                                <h2>Build Your Dream</h2>
-                                <h2 id="green_title">TODAY</h2>
+                                <h2 class="common_title_h2">Build Your Dream <b> TODAY </b></h2>     
                             </div>
                         </div>
                         <div class="skill_container d_flex">
@@ -80,7 +79,7 @@
                                 <img :src="type.picture" alt="">
                                 <h4>{{type.title}}</h4>
                                 <p>{{type.overview}}</p>
-                                <p id="start_now">Start now<i class="fas fa-arrow-right"></i></p>
+                                <p id="start_now"><a href="">Start now<i class="fas fa-arrow-right"></i></a></p>
                             </div>
                         </div>
                     </div>
@@ -90,8 +89,26 @@
                 <!-- quality section -->
                 <section>
                     <div class="main_quality_container d_flex">
-                        <div class="img_section half_pg_picture"></div>
-                        <div class="title_section d_flex"></div>
+                        <div class="img_section half_pg_picture d_flex">
+                            <img id="img_quality" src="assets/img/section3_01.png" alt="">
+                            
+                        </div>
+                        <div class="title_section d_flex">
+                            <h5 class="common_title_h5"> Dream with <b>maxcoach</b></h5>
+                            <h2 class="common_title_h2">Construct A <b> Stunning</b> Career Perspective</h2>
+
+                            <div :class="visib?'block_unactive d_flex':'block_active d-flex'" v-for="(opt,i) in quality">
+                                <h4 class="d_flex">{{opt.title}}<i v-if="visib" class="fas fa-plus-circle" @click="showFunc(i)"></i><i v-else class="fas fa-minus-circle" @click="hideFunc(i)"></i></h4> 
+                                <p v-show="popi" class="d_flex">{{opt.overview}}</p> 
+         
+                            </div>
+                            
+                            
+                            
+                            <!-- <div :class="visib?'block_active d_flex':'block_unactive d-flex'" v-for="(opt,i) in quality">
+                                <h4 class="d_flex">{{opt.title}}<i class="fas fa-plus-circle" @click="showFunc(i)"></i></h4>
+                            </div> -->
+                        </div>
                     </div>
                 </section>
                 <!-- //quality section -->

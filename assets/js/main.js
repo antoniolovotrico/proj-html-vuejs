@@ -15,6 +15,8 @@
 let app = new Vue ({
     el:"#app",
     data:{
+        visib: true,
+        popi : false,
         menu:[
             {voice:"home"},
             {voice:"pages"},
@@ -43,9 +45,43 @@ let app = new Vue ({
                 title: "Graphic Design",
                 picture: "./assets/img/section2_04.png",
                 overview: "Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness."
+            }   
+        ],
+        qualIndex : null,
+        quality:[
+            {   
+                hide: true,
+                title: "Multiple Platforms Supported for teaching & Studying",
+                overview: "MaxCoach supports the act of teaching and learning on multiple platforms like online or offline via material downloads. We know things aren't supposed to be devoured in a shor time, you can always access our knowledge base from any device."
+            },
+            {   
+                hide: true,
+                title: "Multiple Course Partecipation at the Same Time",
+                overview: "Learn to start building a webpage from scratch. You decide your own pace, course and speed."
+            },
+            {   
+                hide: true,
+                title: "Track Study Progress & Deliver Prompt Feedback",
+                overview: "Learners are encouraged to study the mechanism and structure of system administration."
             }
-
-        
         ]
-    }
+    },
+    methods:{
+        showFunc:function(i){
+            this.qualIndex = i;
+            this.visib = false;
+            this.popi = true;
+            console.log(this.qualIndex);
+            
+        },
+        hideFunc:function(i){
+            this.qualIndex = i;
+            this.visib = true;
+            this.popi = false;
+            
+        }
+        
+
+    },
+
 })
