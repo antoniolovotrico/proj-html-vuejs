@@ -67,7 +67,7 @@
             <main>
                 <!-- skills section -->
                 <section>
-                    <div class="main_skill_container">
+                    <div class="main_skill_container ">
                         <div class="title_container">
                             <h5>Start learling code coding languages</h5>
                             <div class="double_color d_flex">
@@ -76,10 +76,12 @@
                             </div>
                         </div>
                         <div class="skill_container d_flex">
-                            <div class="skill_card d_flex"></div>
-                            <div class="skill_card d_flex"></div>
-                            <div class="skill_card d_flex"></div>
-                            <div class="skill_card d_flex"></div>
+                            <div class="skill_card d_flex" v-for="type in skill">
+                                <img :src="type.picture" alt="">
+                                <h4>{{type.title}}</h4>
+                                <p>{{type.overview}}</p>
+                                <p id="start_now">Start now<i class="fas fa-arrow-right"></i></p>
+                            </div>
                         </div>
                     </div>
                 </section>

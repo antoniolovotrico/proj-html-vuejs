@@ -22,6 +22,30 @@ let app = new Vue ({
             {voice:"features"},
             {voice:"blog"},
             {voice:"shop"},
+        ],
+        skill:[
+            {
+                title: "Idea Discussion",
+                picture: "./assets/img/section2_01.png",
+                overview: "Get teamed up with the specialists who work and teach coding for years at famous universities."
+            },
+            {   
+                title: "Web Development",
+                picture: "./assets/img/section2_02.png",
+                overview: "Learn to start building a webpage from scratch. You decide your own pace, course and speed."
+            },
+            {   
+                title: "System Administration",
+                picture: "./assets/img/section2_03.png",
+                overview: "Learners are encouraged to study the mechanism and structure of system administration."
+            },
+            {   
+                title: "Graphic Design",
+                picture: "./assets/img/section2_04.png",
+                overview: "Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness."
+            }
+
+        
         ]
     }
 })

@@ -155,15 +155,47 @@ input:focus {
 .title_container h5{
     text-align: center;
     text-transform: uppercase;
-    padding-top: 50px;
+    padding-top: 70px;
     color: grey;
     font-weight: 400;
 }
 .title_container h2{
     font-size: 2.6rem;
+    padding-top: 25px;
+    padding-right: 10px;
+    color: #513e5e;
+}
+#green_title{
+    color: #22ad96;
+    font-weight: 400;
 }
 .double_color{
     justify-content: center;
+}
+.skill_container{
+    justify-content: space-around;
+    align-items: center;
+}
+.skill_card{
+    height: 340px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.skill_card p{
+    font-size: 0.84rem;
+    text-align: center;
+    color: grey;
+    line-height: 20px;
+}
+#start_now{
+    color: #b6b8d1;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+.fa-arrow-right{
+    padding-left: 8px;
 }
 
 /* quality section */
