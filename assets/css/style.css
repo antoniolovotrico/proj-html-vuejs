@@ -145,12 +145,10 @@ input:focus {
 .main_skill_container{
     width: 1080px;
     margin:auto;
-    height: 600px;
-    
+    height: 600px;  
 }
 .title_container{
     height: 200px;
-
 }
 .title_container h5{
     text-align: center;
@@ -227,7 +225,7 @@ input:focus {
     width: 1080px;
     margin:auto;
     height: 600px;
-    background-color:pink;
+    background-color:orangered;
 }
 
 /* events section */
