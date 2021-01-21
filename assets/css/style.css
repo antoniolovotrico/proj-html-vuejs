@@ -15,6 +15,9 @@ display: flex;
 header{
     background-color: #f0efef;
 }
+.grey{
+    background-color: #f0efef; 
+}
 .common_title_h2{
     font-size: 2.6rem;
     color: #513e5e;
@@ -140,7 +143,7 @@ input:focus {
 }
 .img_hero{
     height: 550px;
-    padding-bottom: 50px;   
+    padding-bottom: 100px;   
 }
 
 .toggle{
