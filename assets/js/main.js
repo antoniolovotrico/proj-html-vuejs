@@ -137,6 +137,88 @@ let app = new Vue ({
                 price:"$59.00"
             }
         ],
+        events:[
+            {   
+                location: "Texas, US",
+                event:"Storytelling Workshop",
+                day:"22",
+                month:"NOV"
+            },
+            {   
+                location: "New York, US",
+                event:"Painting Art Contest 2020",
+                day:"10",
+                month:"OCT"
+            },
+            {   
+                location: "Hamburg, Germany",
+                event:"International Art Fair 2020",
+                day:"23",
+                month:"NOV"
+            },
+            {   
+                location: "Illinois, US",
+                event:"Street Performance: Call for Artist",
+                day:"15",
+                month:"DEC"
+            },
+            {   
+                location: "Illinois, US",
+                event:"Consumer Food Safety Education Conference",
+                day:"22",
+                month:"JUL"
+            },
+            {   
+                location: "Dubai",
+                event:"How meditation improve your mental health?",
+                day:"12",
+                month:"AUG"
+            }
+        ],
+        testimonials:[
+            {   
+                picture: "./assets/img/section8_testimonial01.jpg",
+                overview: "I am free to learn at my own pace, follow my own schedule and choose the subject I like. Great study portal for people like me.",
+                name: "mina hollace",
+                job:"Freelancer",
+            },
+            {   
+                picture: "./assets/img/section8_testimonial02.jpg",
+                overview: "MaxCoach is my best choice. Their tutors are snart and professional when dealing with students.",
+                name: "madley pondor",
+                job:"IT Specialist",
+            },
+            {   
+                picture: "./assets/img/section8_testimonial03.jpg",
+                overview: "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation.",
+                name: "luvic dubble",
+                job:"Private Tutor"
+            }
+        ],
+        footer:[
+            {
+                title:"address",
+                voice:"382 NE 191st St # 8739 Miami, FL 33179-3899",
+                voice2:"+1 (305)547-9909 (9am - 5pm EST, Monday - Friday)",
+                voice3:"support@maxcoach.com",
+            },
+            {
+                title:"Explore",
+                voice:"Stat here",
+                voice2:"Blog",
+                voice3:"About us",
+                voice4:"Succes story us",
+                voice5:"Courses",
+                voice6:"Contact us",
+            },
+            {
+                title:"Information",
+                voice:"Membership",
+                voice2:"Purchase guide",
+                voice3:"Privacy policy",
+                voice4:"Term of service",
+            }
+        ]
     },
     methods:{
         showFunc:function(i){

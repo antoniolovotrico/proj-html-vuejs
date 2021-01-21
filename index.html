@@ -167,63 +167,84 @@
                             </div>
                             <a href=""><button class="down_btn">Get started for free</button></a>
                         </div>
-                        <div class="img_section_grey half_pg_picture">
+                        <div id="picture_half" class="img_section_grey half_pg_picture d_flex">
                             <img src="assets/img/section5_01.png" alt="">
-                            <img src="assets/img/maxcoach_03.png" alt="">
+                            <img id="dot_circle" src="assets/img/maxcoach_03.png" alt="">
                         </div>
-                        <div class="img_section_grey half_pg_picture">
+                        <div id="picture_half2" class="img_section_grey half_pg_picture d_flex">
                             <img src="assets/img/section5_02.png" alt="">
-                            <img id="circle" src="assets/img/maxcoach_01.png" alt="">
                             <img src="assets/img/maxcoach_04.png" alt="">
-                            <img src="assets/img/maxcoach_05.png" alt="">
                         </div>
-                        <div class="title_learn d_flex">
-                            <div class="learning_card d_flex">
-                                <div class="title_learn d_flex">
-                                    <h5 class="common_title_h5"> whate are you looking for?</h5>
-                                    <h2 class="common_title_h2">Learn on your <b>mobile </b> anytime</h2>
-                                </div>
-                                
-                                <p>Save lessons for late and revise or write notes at any time and on multiple devices on you way. Never interfere with activities of enjoyment or other precious moment.</p>
-                            
-                                <a href=""><button class="down_btn">Download Our App</button></a>
+                        
+                        <div class="learning_card d_flex">
+                            <div class="title_learn2 d_flex">
+                                <h5 class="common_title_h5"> whate are you looking for?</h5>
+                                <h2 class="common_title_h2">Learn on your <b>mobile </b> anytime!</h2>
                             </div>
+                            
+                            <p>Save lessons for late and revise or write notes at any time and on multiple devices on you way. Never interfere with activities of enjoyment or other precious moment.</p>
+                        
+                            <a href=""><button class="down_btn">Download Our App</button></a>
                         </div>
+                        
                     </div>
                 </section>
                 <!-- //learning section -->
 
                 <!-- events section -->
                 <section>
-                    <div class="main_events_container">
-                        <div class="title_container"></div>
-                        <div class="events_container d_flex">
-                            <div class="events_card"></div>
-                            <div class="events_card"></div>
-                            <div class="events_card"></div>
-                            <div class="events_card"></div>
-                            <div class="events_card"></div>
-                            <div class="events_card"></div>
+                    <div class="main_events_container d_flex">
+                        <div class="title_container_events d_flex">
+                            <h5 class="common_title_h5"> get in contact now</h5>
+                            <h2 class="common_title_h2">Upcoming <b>Events </b></h2>
                         </div>
-                        <h4></h4>
+                        <div class="events_container d_flex">
+                            <div class="events_card d_flex" v-for="appointment in events">
+                                <div class="left_card_side d_flex">
+                                    <h5 class="location"><i class="fas fa-map-marker-alt"></i>{{appointment.location}} </h5>
+                                    <h4 class="event">{{appointment.event}} </h4>
+                                </div>
+                                <div class="right_card_side d_flex">
+                                    <h2 class="day common_title_h2_event"><b>{{appointment.day}}</b> </h2>
+                                    <h5 class="month">{{appointment.month}} </h5>
+                                    <a href=""><button class="down_btn_event">Get ticket</button></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <h4 id="disclaimer">Excited about our event?<a href=""><b>View all events</b><i class="fas fa-arrow-right"></i></a></h4>
                     </div>
                 </section>
                 <!-- //event section -->
 
                 <!-- testimonial section -->
-                <section>
-                    <div class="main_testimonial_container">
-                        <div class="title_container"></div>
-                        <div class="testimonial_container d_flex">
-                            <div class="testimonial_card d_flex"></div>
-                            <div class="testimonial_card d_flex"></div>
-                            <div class="testimonial_card d_flex"></div>
-                            <div class="testimonial_card d_flex"></div>
+                <section class="testimonial_overlay">
+                    <div class="main_testimonial_container d_flex">
+                        <div class="title_container_testimonial d_flex">
+                            <h5 class="common_title_h5"> people are praising maxcoach</h5>
+                            <h2 class="common_title_h2">What make they <b>love us </b></h2>
                         </div>
-                        <div class="dots"></div>
+                        <div class="testimonial_container d_flex">
+                            <div class="testimonial_card d_flex" v-for="card in testimonials">
+                                <img class="testimonial_pic" :src="card.picture" alt="">
+                                <p class="testimonial_overview">{{card.overview}} </p>
+                                <h5 class="testimonial_name">{{card.name}} </h5>
+                                <h6 class="testimonial_job">{{card.job}} </h6>
+                            </div>    
+                        </div>
+                        <div class="dots d_flex">
+                            
+                            <i class="fas fa-circle active first"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle last"></i>
+                            
+                        </div>
                         <div class="call_to_action d_flex">
                             <img src="" alt="">
-                            <div class="action_title"></div>
+                            <div class="action_title">
+                                
+                            </div>
                             <img src="" alt="">
                         </div>
                     </div>
@@ -237,10 +258,18 @@
             <!-- footer -->
             <footer>
                 <div class="footer_container d_flex">
-                    <div class="address_footer"></div>
-                    <div class="col_footer"></div>
-                    <div class="col_footer"></div>
-                    <div class="col_footer"></div>
+                    
+                    <div class="col_footer" v-for="info in footer">
+                        <ul class="d_flex">
+                            <li class="footer_title"><h3>{{info.title}}</h3></li>
+                            <li class="footer_voice"><a href="">{{info.voice}}</a></li>
+                            <li class="footer_voice"><a href="">{{info.voice2}}</a></li>
+                            <li class="footer_voice"><a href="">{{info.voice3}}</a></li>
+                            <li class="footer_voice"><a href="">{{info.voice4}}</a></li>
+                            <li class="footer_voice"><a href="">{{info.voice5}}</a></li>
+                            <li class="footer_voice"><a href="">{{info.voice6}}</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <h5></h5>
                 <i></i>

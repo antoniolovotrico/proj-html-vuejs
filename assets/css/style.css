@@ -8,7 +8,6 @@
 /* Utility */
 body{
     font-family: "lato";
-    background-color: #f0efef;
 }
 .d_flex{
 display: flex;
@@ -380,10 +379,11 @@ input:focus {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 .learning_card{
-    height: 450px;
-    width: 350px;
+    height: 400px;
+    width: 400px;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -393,8 +393,14 @@ input:focus {
     width: 350px;
     justify-content: space-evenly;
 }
+.title_learn2{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    justify-content: space-evenly;
+}
 .learning_option{
-    height: 300px;
+    height: 150px;
     width: 400px;
     flex-direction: column;
     justify-content: space-evenly;
@@ -407,39 +413,184 @@ input:focus {
     background-image: url(../img/section5_underlay-shape-grey.svg);  
     background-repeat: no-repeat;
     background-size: contain;
-    width: 500px;
-  }
-  .half_pg_picture{
-      width: 600px;
-      height: 500px;
-      
-  }
-  #circle {
-    position: absolute;
-    top:50%;
-    left: 0;
-
 }
+.half_pg_picture{
+      width: 400px;
+      height: 400px;   
+}
+#picture_half{
+    align-items: center;
+    width: 600px;
+}
+#picture_half2{
+    align-items: flex-end;
+}
+#dot_circle {
+    height: 150px;
+} 
 
 /* events section */
 .main_events_container{
     width: 1080px;
     margin:auto;
-    height: 600px;
-    background-color:orange;
+    height: 900px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.title_container_events{
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.events_container{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 550px;
+}
+.events_card{
+    width: 500px;
+    height: 150px;
+    background-color: #f0efef;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+.left_card_side{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.location{
+    height: 30px;
+    color: grey;
+    font-weight: 300;
+}
+.location i{
+    margin-right: 10px;
+}
+.right_card_side{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.down_btn_event{
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    border: #22ad96;
+    background-color: #22ad96;
+    color: white;
+    font-weight: 700;
+}
+.common_title_h2_event b{
+    color: #22ad96;
+    font-weight: 300;
+    height: 30px;
+    font-size: 2.6rem;  
+}
+.month{
+    height: 26px;
+}
+#disclaimer{
+    height: 50px;
+    color: grey;
+}
+#disclaimer b{
+    color: #22ad96 ;
+}
+#disclaimer i{
+    color: #22ad96 ;
+    font-size: 0.8rem;
+}
+#disclaimer a{
+    color: lightgray ;
 }
 
 /* testimonial section */
+.testimonial_overlay{
+    width: 100vw;
+    margin:auto;
+    height: 800px;
+    background-image: url(../img/section1_overlay.svg);
+    justify-content: center; 
+    transform: scaleY(-1); 
+}
 .main_testimonial_container{
     width: 1080px;
     margin:auto;
+    height: 800px;
+    transform: scaleY(-1); 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.title_container_testimonial{
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 150px;
+    justify-content: space-evenly;
+}
+.testimonial_container{
+    width: 1080px;
     height: 600px;
-    background-color:olive;
+    justify-content: space-around;
+
+}
+.testimonial_card{
+    height: 320px;
+    width: 320px;
+    background-color: ivory;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.dots{
+    height: 60px;
+    width: 120px;
+    justify-content: space-around;
+    color: darkgrey;
+}
+.testimonial_pic{
+    border-radius: 50%;
+    height: 120px;
+    position: sticky;
+    bottom:100%
+}
+.testimonial_overview{
+    width: 250px;
+    text-align: center;
+    
+}
+.testimonial_name{
+    text-transform: uppercase;
+}
+.testimonial_job{
+    color: darkgrey;
 }
 
 footer{
     width: 1080px;
     margin:auto;
     height: 500px;
-    background-color:azure;
+}
+.footer_container{
+    justify-content: space-between;
+}
+.col_footer{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.col_footer ul{
+    list-style: none;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    
+}
+.footer_title {
+    text-transform: capitalize;
 }
