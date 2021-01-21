@@ -15,9 +15,6 @@
 let app = new Vue ({
     el:"#app",
     data:{
-        gogi:[false,false,false],
-        visib: true,
-        popi : false,
         menu:[
             {voice:"home"},
             {voice:"pages"},
@@ -48,20 +45,20 @@ let app = new Vue ({
                 overview: "Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness."
             }   
         ],
-        qualIndex : "0",
+        qualIndex :[false,false,false],
         quality:[
             {   
-                hide: true,
+                hide: false,
                 title: "Multiple Platforms Supported for teaching & Studying",
                 overview: "MaxCoach supports the act of teaching and learning on multiple platforms like online or offline via material downloads. We know things aren't supposed to be devoured in a shor time, you can always access our knowledge base from any device."
             },
             {   
-                hide: true,
+                hide: false,
                 title: "Multiple Course Partecipation at the Same Time",
                 overview: "Learn to start building a webpage from scratch. You decide your own pace, course and speed."
             },
             {   
-                hide: true,
+                hide: false,
                 title: "Track Study Progress & Deliver Prompt Feedback",
                 overview: "Learners are encouraged to study the mechanism and structure of system administration."
             }
@@ -83,7 +80,63 @@ let app = new Vue ({
                 num:"100%",
                 desc:"satisfaction rate",
             }
-        ]
+        ],
+        courses:[
+            {   
+                picture: "./assets/img/section4_01.jpg",
+                title: "Learning to write as a professional Author",
+                author: "BLanche Fields",
+                authorImg:"./assets/img/section4_001.jpeg",
+                students:"50",
+                lessons:"20",
+                price:"$40.00"
+            },
+            {   
+                picture: "./assets/img/section4_02.jpg",
+                title: "Customer-centric Info-Tech Strategies",
+                author: "Maggie Strickland",
+                authorImg:"./assets/img/section4_002.jpeg",
+                students:"769",
+                lessons:"24",
+                price:"Free"
+            },
+            {   
+                picture: "./assets/img/section4_03.jpg",
+                title: "Open Programming Courses for Everyone: Python",
+                author: "Maggie Strickland",
+                authorImg:"./assets/img/section4_002.jpeg",
+                students:"62",
+                lessons:"17",
+                price:"$19.00"
+            },
+            {   
+                picture: "./assets/img/section4_04.jpg",
+                title: "Academic Listening and Note-taking",
+                author: "BLanche Fields",
+                authorImg:"./assets/img/section4_001.jpeg",
+                students:"67",
+                lessons:"14",
+                price:"$26.00"
+            },
+            {   
+                picture: "./assets/img/section4_05.jpg",
+                title: "Master jQuery in a Short Period of Time",
+                author: "BLanche Fields",
+                authorImg:"./assets/img/section4_001.jpeg",
+                students:"51",
+                lessons:"6",
+                price:"$39.00"
+            },
+            {   
+                picture: "./assets/img/section4_06.jpg",
+                title: "Learning to write as a professional Author",
+                author: "BLanche Fields",
+                authorImg:"./assets/img/section4_001.jpeg",
+                students:"50",
+                lessons:"20",
+                price:"$59.00"
+            }
+        ],
     },
     methods:{
         showFunc:function(i){
@@ -92,7 +145,7 @@ let app = new Vue ({
             // this.popi = true;
             // console.log(this.qualIndex);
 
-            this.$set(this.gogi,i,true)
+            this.$set(this.qualIndex,i,true)
             
         },
         hideFunc:function(i){
@@ -100,8 +153,8 @@ let app = new Vue ({
             // this.visib = true;
             // this.popi = false;
 
-            this.$set(this.gogi,i,false)
-            
+            this.$set(this.qualIndex,i,false)
+            console.log(this.qualIndex[i]);
         }
         
 

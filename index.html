@@ -97,9 +97,9 @@
                             <h5 class="common_title_h5"> Dream with <b>maxcoach</b></h5>
                             <h2 class="common_title_h2">Construct A <b> Stunning</b> Career Perspective</h2>
                             
-                            <div :class="gogi[i]?'block_active d_flex':'block_unactive d-flex'" v-for="(item,i) in quality">
-                                <h4 class="d_flex">{{quality[i].title}}<i v-if="gogi[i]" class="fas fa-minus-circle" @click="hideFunc(i)"></i><i v-else class="fas fa-plus-circle" @click="showFunc(i)"></i></h4> 
-                                <p v-show="gogi[i]" class="d_flex">{{quality[i].overview}}</p> 
+                            <div :class="qualIndex[i]?'block_active d_flex':'block_unactive d-flex'" v-for="(item,i) in quality">
+                                <h4 class="d_flex">{{quality[i].title}}<i v-if="qualIndex[i]" class="fas fa-minus-circle" @click="hideFunc(i)"></i><i v-else class="fas fa-plus-circle" @click="showFunc(i)"></i></h4> 
+                                <p v-show="qualIndex[i]" class="d_flex">{{quality[i].overview}}</p> 
          
                             </div>   
                         </div>
@@ -119,20 +119,34 @@
                 <!-- //data section -->
 
                 <!-- courses section -->
-                <section>
-                    <div class="main_courses_container">
-                        <div class="title_container">
-
+                <section class="overlay_courses d_flex">
+                    <div class="main_courses_container d_flex">
+                        <div class="title_container d_flex">
+                            <h5 class="common_title_h5"> Start learling code coding languages</h5>
+                            <div class="double_color d_flex">
+                                <h2 class="common_title_h2">Build Your Dream <b> TODAY </b></h2>     
+                            </div>
                         </div>
                         <div class="courses_container d_flex">
-                            <div class="courses_card d_flex"></div>
-                            <div class="courses_card d_flex"></div>
-                            <div class="courses_card d_flex"></div>
-                            <div class="courses_card d_flex"></div>
-                            <div class="courses_card d_flex"></div>
-                            <div class="courses_card d_flex"></div>
+                            <div class="courses_card d_flex" v-for="card in courses">
+                                
+                                <div class="img_container">
+                                    <div class="price d_flex">{{card.price}} </div>
+                                    <img class="courses_img" :src="card.picture" alt="">
+                                    
+                                </div>
+                                <div class="info_container d_flex">
+                                    <div>
+                                        <h5>  <img :src="card.authorImg" class="authorImg" alt="">{{card.author}} </h5>
+                                        
+                                    </div>
+                                    <h3>{{card.title}} </h3>
+                                    <h6><i class="far fa-file"></i> {{card.lessons}} Lessons <i class="far fa-user"></i> {{card.students}} Students</h6>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <button></button>
+                        <a href=""><button class="down_btn">View all courses <i class="fas fa-arrow-right"></i></button></a>
                     </div>
                 </section>
                 <!-- //courses section -->
