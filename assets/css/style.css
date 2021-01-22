@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* Utility */
@@ -13,6 +14,7 @@ body{
     width: 100vw;
     height: 100vh;
     position: relative;
+    
 }
 .d_flex{
 display: flex;
@@ -657,13 +659,15 @@ input:focus {
 }
 
 footer{
-    width: 1080px;
-    margin:auto;
-    height: 300px;
+  height: 300px;
+  width: 100vw;   
 }
 .footer_container{
     justify-content: space-between;
     align-items: center;
+    width: 1080px;
+    height: 300px;
+    margin: auto;
 }
 .col_footer{
     justify-content: space-evenly;
@@ -697,3 +701,26 @@ footer{
     padding-bottom: 15px;
     font-size: 0.8rem;
 }
+
+#page_up {
+    /*display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #22ad96;
+    border-radius: 100%;
+    color: white; /* Set a background color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 17px 20px; /* Some padding */
+    font-size: 1.5rem; /* Increase font size */
+    box-shadow: 0 0 10px grey;
+    
+  }
+  
+  #page_up:hover {
+    background-color: #513e5e; /* Add violet background on hover */
+    box-shadow: 0 0 10px grey;
+  }
