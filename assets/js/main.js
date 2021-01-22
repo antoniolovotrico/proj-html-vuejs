@@ -177,7 +177,7 @@ let app = new Vue ({
         ],
         testimonials:[
             {   
-                select:true,
+                select:false,
                 picture: "./assets/img/section8_testimonial01.jpg",
                 overview: "I am free to learn at my own pace, follow my own schedule and choose the subject I like. Great study portal for people like me.",
                 name: "mina hollace",
@@ -196,6 +196,13 @@ let app = new Vue ({
                 overview: "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation.",
                 name: "luvic dubble",
                 job:"Private Tutor"
+            },
+            {   
+                select:false,
+                picture: "./assets/img/section8_testimonial04.jpg",
+                overview: "What incredible skill i've learned during this six month!! Never go Back!",
+                name: "melo the fool",
+                job:"Master of Rabbits "
             }
         ],
         footer:[
@@ -223,7 +230,22 @@ let app = new Vue ({
             }
         ]
     },
+    mounted(){
+        this.shuffleFunc();
+    },
     methods:{
+        shuffleFunc:function(){
+            this.testimonials.forEach((elemnt,i)=>{
+                // create a new order of the element in testimonials array
+                const shuffledAvatar = this.testimonials.sort(() => 0.5 - Math.random());
+                
+                // Get sub-array of first 3 elements after shuffled and set it equal to the original array.So when the shuffleFunc is recalled in Mounted we have every time the page i refreshed a new order in testimonials array.
+                let shuffledTestimonials = shuffledAvatar.slice(0, 3);
+                console.log(shuffledTestimonials);
+                this.testimonials = shuffledTestimonials
+            })
+            
+        },
         //Function to show paragraph in quality section on click on +
         showFunc:function(i){
             this.quality.forEach((element,a) => {
