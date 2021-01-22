@@ -224,6 +224,7 @@ let app = new Vue ({
         ]
     },
     methods:{
+        //Function to show paragraph in quality section on click on +
         showFunc:function(i){
             this.quality.forEach((element,a) => {
                 this.$set(this.quality[a],"hide",false);
@@ -237,6 +238,7 @@ let app = new Vue ({
             // this.qualIndex = i;
             // this.$set(this.qualIndex,i,true)       
         },
+        //Function to hide paragraph in quality section on click on -
         hideFunc:function(i){
             this.quality.forEach((element,a) => {
                 if(a==i){
@@ -250,11 +252,15 @@ let app = new Vue ({
             // this.$set(this.qualIndex,i,false)
                
         },
+        //Function to add class active to element in testimonial section on click on dots
         activeFunc:function(i){
             this.testimonials.forEach((element,a)=>{ 
+                
                 if(i==a && element.select == false){ 
                     this.$set(this.testimonials[a],"select",true);
                 }else if (i==a && element.select == true){
+                    this.$set(this.testimonials[a],"select",false);
+                }else{
                     this.$set(this.testimonials[a],"select",false);
                 }
             })
