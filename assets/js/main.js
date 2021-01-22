@@ -177,18 +177,21 @@ let app = new Vue ({
         ],
         testimonials:[
             {   
+                select:false,
                 picture: "./assets/img/section8_testimonial01.jpg",
                 overview: "I am free to learn at my own pace, follow my own schedule and choose the subject I like. Great study portal for people like me.",
                 name: "mina hollace",
                 job:"Freelancer",
             },
             {   
+                select:false,
                 picture: "./assets/img/section8_testimonial02.jpg",
                 overview: "MaxCoach is my best choice. Their tutors are snart and professional when dealing with students.",
                 name: "madley pondor",
                 job:"IT Specialist",
             },
             {   
+                select:false,
                 picture: "./assets/img/section8_testimonial03.jpg",
                 overview: "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation.",
                 name: "luvic dubble",
@@ -226,20 +229,46 @@ let app = new Vue ({
             // this.visib = false;
             // this.popi = true;
             // console.log(this.qualIndex);
+            this.quality.forEach((element,a) => {
+                this.$set(this.quality[a],"hide",false);
+                if(a==i){
+                    console.log(this.quality[a].hide);
+                    this.$set(this.quality[a],"hide",true);
+                    console.log(this.quality[a].hide);
 
-            this.$set(this.qualIndex,i,true)
+                
+                }
+                  
+            });
+            //this.$set(this.qualIndex,i,true)
             
         },
         hideFunc:function(i){
-            // this.qualIndex = i;
-            // this.visib = true;
-            // this.popi = false;
-
-            this.$set(this.qualIndex,i,false)
-            console.log(this.qualIndex[i]);
-        }
-        
-
+            this.quality.forEach((element,a) => {
+                if(a==i){
+                    console.log(this.quality[a].hide);
+                    this.$set(this.quality[a],"hide",false);
+                    console.log(this.quality[a].hide); 
+                }           
+            });
+               // Method using Vue.set in array instead of object
+               // this.qualIndex = i;
+               // this.visib = true;
+               // this.popi = false;
+               // this.$set(this.quality[i].hide,"hide",true)
+               // this.$set(this.qualIndex,i,false)
+               // console.log(this.qualIndex[i]);
+               // console.log(this.quality[i].hide);
+        },
+        activeFunc:function(i){
+            this.testimonials.forEach((element,a)=>{
+                this.$set(this.testimonials[a],"select",false);
+                if(i==a){ 
+                    this.$set(this.testimonials[a],"select",true);
+                }else if (element.select == true){
+                    this.$set(this.testimonials[a],"select",false);
+                }
+            })
+        },
     },
-
 })

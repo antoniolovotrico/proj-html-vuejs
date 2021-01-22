@@ -17,6 +17,12 @@
     <body>
         <!-- container vue istanza -->
         <div id="app">
+            <div class="toggle d_flex">
+                <a href=""><i class="fas fa-ruler-combined"></i></a>
+                <a href=""><i class="far fa-futbol"></i></a>
+                <a href=""><i class="fas fa-book"></i></a>
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </div>
             <header>
                 
                 <!-- navbar -->
@@ -54,19 +60,14 @@
                             <img class="img_hero" src="assets/img/section1_01.png" alt="">
                         </div>
                     </div>
-                    <div class="toggle d_flex">
-                        <a href=""><i class="fas fa-ruler-combined"></i></a>
-                        <a href=""><i class="far fa-futbol"></i></a>
-                        <a href=""><i class="fas fa-book"></i></a>
-                        <a href=""><i class="fas fa-shopping-cart"></i></a>
-                    </div>
+                    
                 </div>
                 <!-- //hero section -->
             </header>
             <!-- main container of website -->
             <main>
                 <!-- skills section -->
-                <section>
+                <section class="grey">
                     <div class="main_skill_container ">
                         <div class="title_container d_flex">
                             <h5 class="common_title_h5"> Start learling code coding languages</h5>
@@ -97,9 +98,9 @@
                             <h5 class="common_title_h5"> Dream with <b>maxcoach</b></h5>
                             <h2 class="common_title_h2">Construct A <b> Stunning</b> Career Perspective</h2>
                             
-                            <div :class="qualIndex[i]?'block_active d_flex':'block_unactive d-flex'" v-for="(item,i) in quality">
-                                <h4 class="d_flex">{{quality[i].title}}<i v-if="qualIndex[i]" class="fas fa-minus-circle" @click="hideFunc(i)"></i><i v-else class="fas fa-plus-circle" @click="showFunc(i)"></i></h4> 
-                                <p v-show="qualIndex[i]" class="d_flex">{{quality[i].overview}}</p> 
+                            <div :class="item.hide?'block_active d_flex':'block_unactive d-flex'" v-for="(item,i) in quality">
+                                <h4 class="d_flex">{{item.title}}<i v-if="item.hide" class="fas fa-minus-circle" @click="hideFunc(i)"></i><i v-else class="fas fa-plus-circle" @click="showFunc(i)"></i></h4> 
+                                <p v-show="item.hide" class="d_flex">{{item.overview}}</p> 
          
                             </div>   
                         </div>
@@ -225,28 +226,27 @@
                             <h2 class="common_title_h2">What make they <b>love us </b></h2>
                         </div>
                         <div class="testimonial_container d_flex">
-                            <div class="testimonial_card d_flex" v-for="card in testimonials">
+                            <div class="testimonial_card d_flex"  v-for="(card,i) in testimonials" :class="{active:card.select}">
                                 <img class="testimonial_pic" :src="card.picture" alt="">
                                 <p class="testimonial_overview">{{card.overview}} </p>
                                 <h5 class="testimonial_name">{{card.name}} </h5>
                                 <h6 class="testimonial_job">{{card.job}} </h6>
                             </div>    
                         </div>
-                        <div class="dots d_flex">
-                            
-                            <i class="fas fa-circle active first"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle last"></i>
-                            
+                    </div>
+                    <div class="dots d_flex">
+                        <div class="dots_element" v-for="(dots,i) in testimonials">     
+                            <i @click="activeFunc(i)" class="fas fa-circle" :class="{active:dots.select}"></i>   
                         </div>
-                        <div class="call_to_action d_flex">
-                            <img src="" alt="">
-                            <div class="action_title">
-                                
-                            </div>
-                            <img src="" alt="">
+                    </div>
+                    <div class="call_to_action d_flex">
+                        <img id="lines" src="assets/img/maxcoach_01.png" alt="">
+                        <div class="action_title d_flex">
+                            <h4>Start today for getting <b> Online Certification</b></h4>
+                            <h3>You can be your own guiding star with our help!</h3>
+                            <a href=""><button class="down_btn">Get starded now</button></a>
                         </div>
+                        <img src="assets/img/maxcoach_02.png" alt="">
                     </div>
                 </section>
                 <!-- //testimonial section -->
@@ -259,7 +259,7 @@
             <footer>
                 <div class="footer_container d_flex">
                     
-                    <div class="col_footer" v-for="info in footer">
+                    <div class="col_footer d_flex" v-for="info in footer">
                         <ul class="d_flex">
                             <li class="footer_title"><h3>{{info.title}}</h3></li>
                             <li class="footer_voice"><a href="">{{info.voice}}</a></li>
