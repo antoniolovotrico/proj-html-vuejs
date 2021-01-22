@@ -177,7 +177,7 @@ let app = new Vue ({
         ],
         testimonials:[
             {   
-                select:false,
+                select:true,
                 picture: "./assets/img/section8_testimonial01.jpg",
                 overview: "I am free to learn at my own pace, follow my own schedule and choose the subject I like. Great study portal for people like me.",
                 name: "mina hollace",
@@ -225,23 +225,17 @@ let app = new Vue ({
     },
     methods:{
         showFunc:function(i){
-            // this.qualIndex = i;
-            // this.visib = false;
-            // this.popi = true;
-            // console.log(this.qualIndex);
             this.quality.forEach((element,a) => {
                 this.$set(this.quality[a],"hide",false);
                 if(a==i){
                     console.log(this.quality[a].hide);
                     this.$set(this.quality[a],"hide",true);
-                    console.log(this.quality[a].hide);
-
-                
-                }
-                  
+                    console.log(this.quality[a].hide);  
+                }              
             });
-            //this.$set(this.qualIndex,i,true)
-            
+            // Method using Vue.set in array instead of create a new property in object
+            // this.qualIndex = i;
+            // this.$set(this.qualIndex,i,true)       
         },
         hideFunc:function(i){
             this.quality.forEach((element,a) => {
@@ -251,21 +245,16 @@ let app = new Vue ({
                     console.log(this.quality[a].hide); 
                 }           
             });
-               // Method using Vue.set in array instead of object
-               // this.qualIndex = i;
-               // this.visib = true;
-               // this.popi = false;
-               // this.$set(this.quality[i].hide,"hide",true)
-               // this.$set(this.qualIndex,i,false)
-               // console.log(this.qualIndex[i]);
-               // console.log(this.quality[i].hide);
+            // Method using Vue.set in array instead of create a new property in object
+            // this.qualIndex = i;
+            // this.$set(this.qualIndex,i,false)
+               
         },
         activeFunc:function(i){
-            this.testimonials.forEach((element,a)=>{
-                this.$set(this.testimonials[a],"select",false);
-                if(i==a){ 
+            this.testimonials.forEach((element,a)=>{ 
+                if(i==a && element.select == false){ 
                     this.$set(this.testimonials[a],"select",true);
-                }else if (element.select == true){
+                }else if (i==a && element.select == true){
                     this.$set(this.testimonials[a],"select",false);
                 }
             })
