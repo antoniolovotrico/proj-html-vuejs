@@ -45,7 +45,7 @@ header{
 }
 .toggle{
     position: fixed;
-    top: 50%;
+    top: 40%;
     right: 0;
     flex-direction: column;
     height: 140px;
@@ -256,6 +256,12 @@ input:focus {
     color: #b6b8d1;
     font-size: 0.8rem;
     font-weight: 800;
+}
+#start_now a:hover{
+    transition: ease-in-out 0.5s;
+    transform: scale(1.10);
+    color: #513e5e;
+    cursor: pointer;
 }
 .fa-arrow-right{
     padding-left: 8px;
