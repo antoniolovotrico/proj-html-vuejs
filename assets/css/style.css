@@ -57,6 +57,12 @@ header{
     border-radius: 5px;
     box-shadow: 0 0 10px grey;
 } 
+.toggle i:hover{
+    cursor: pointer;
+    color: #22ad96;
+    transition: ease-in-out 0.5s;
+    transform: scale(1.15); 
+}
 .active{
     transition: ease-in-out 0.5s;
     transform: scale(1.15);
@@ -97,9 +103,11 @@ header{
 .voice_menu:hover{
     transition: ease-in-out 0.5s;
     transform: scale(1.15); 
+    cursor: pointer;
 }
 .voice_menu:hover a{
     color: #22ad96;
+    cursor: pointer;
 }
 .fa-chevron-down{
     font-size: 0.5rem;
@@ -112,6 +120,7 @@ header{
     transition: ease-in-out 0.5s;
     transform: scale(1.20);
     color: #22ad96;
+    cursor: pointer;
 }
 .notification {
     color: white;
@@ -194,12 +203,14 @@ input:focus {
     background-color: #22ad96;
     color: white;
     font-weight: 700;
+    box-shadow: 0 0 2px 2px lightgrey;
 }
 .down_btn:hover{
     box-shadow: 0 0 10px grey;
     transition: ease-in-out 0.5s;
     transform: scale(1.10);
     background-color: #513e5e;
+    cursor: pointer;
 }
 
 .fa-download{
@@ -409,6 +420,7 @@ input:focus {
     box-shadow: 0 0 10px grey;
     transition: ease-in-out 0.5s;
     transform: scale(1.10); 
+    cursor: pointer;
 }
 .courses_img{
     width: 320px;
@@ -541,13 +553,15 @@ input:focus {
     height: 150px;
     background-color: #f0efef;
     border-radius: 5px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    box-shadow: 0 0 4px 4px lightgrey;
 }
 .left_card_side{
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    width: 300px;
 }
 .location{
     height: 30px;
@@ -570,6 +584,15 @@ input:focus {
     background-color: #22ad96;
     color: white;
     font-weight: 700;
+    box-shadow: 0 0 2px 2px lightgrey;
+    
+}
+.down_btn_event:hover{
+    box-shadow: 0 0 10px grey;
+    transition: ease-in-out 0.5s;
+    transform: scale(1.10);
+    background-color: #513e5e;
+    cursor: pointer;
 }
 .common_title_h2_event b{
     color: #22ad96;
@@ -649,6 +672,7 @@ input:focus {
 }
 .dots_element:hover i{
     color: #22ad96;
+    cursor: pointer;
 }
 .testimonial_pic{
     border-radius: 50%;
@@ -728,6 +752,10 @@ footer{
     text-decoration: none;
     color: darkgrey;
 }
+.col_footer a:hover {
+    color: #22ad96;
+    cursor: pointer;
+}
 .col_footer{
     list-style: none;
     flex-direction: column;
@@ -754,9 +782,14 @@ footer{
  .social_container i{
     color: grey;
     padding-right: 20px;
-    font-size: 1.5rem;
-    
+    font-size: 1.5rem;  
  }
+ .social_container i:hover {
+    color: #22ad96;
+    transition: ease-in-out 0.5s;
+    transform: scale(1.10);
+    cursor: pointer; 
+}
  #copyright{
      color: lightgrey;
  }
@@ -781,6 +814,7 @@ footer{
     background-color: #513e5e; /* Add violet background on hover */
     box-shadow: 0 0 10px grey;
     transition: ease-in-out 0.5s;
+    cursor: pointer;
 }
   
   
