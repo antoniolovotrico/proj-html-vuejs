@@ -23,6 +23,14 @@ let app = new Vue ({
             {voice:"blog"},
             {voice:"shop"},
         ],
+        hero:[
+            {
+                title:"Complete Your Dreams in JavaS Programming",
+                paragraph:"Learn any coding program in distance and for a resonable fee. You dont'have to struggle alone, you've got our assistance and help",
+                button:"Download free E-book",
+                picture:"./assets/img/section1_01.png"
+            }
+        ],
         skill:[
             {
                 title: "Idea Discussion",
@@ -136,6 +144,13 @@ let app = new Vue ({
                 lessons:"20",
                 price:"$59.00"
             }
+        ],
+        learning:[
+            
+            {option:"Select & customize courses to your preferences"},
+            {option:"Change the tutor and make arrangements"},
+            {option:"Participate in events to join others"},
+            {option:"Get the desidered certificate delivereed at house"}
         ],
         events:[
             {   
