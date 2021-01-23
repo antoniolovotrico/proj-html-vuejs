@@ -289,7 +289,7 @@ let app = new Vue ({
         },
         scrollFunc:function(){
             document.documentElement.scrollTop = 0; 
-            // let btn_up = document.getElementById(page_up);
+            // let btn_up = document.getElementById('page_up');
             // btn_up.style.display = "block";
         }
     },

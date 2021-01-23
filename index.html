@@ -36,7 +36,10 @@
                         </ul>
 
                     </nav>
-                    <a href=""><i class="fas fa-cart-plus"></i></a>
+                    <a href="#" class="notification">
+                        <span><i class="fas fa-cart-plus cart"></i></span>
+                        <span class="badge">0</span>
+                      </a> 
                     <a href=""><i class="far fa-user-circle"></i></a>
 
                     <form class="search">
@@ -121,39 +124,41 @@
 
                 <!-- courses section -->
                 <section class="overlay_courses d_flex">
-                    <div class="main_courses_container d_flex">
-                        <div class="title_container d_flex">
-                            <h5 class="common_title_h5"> Start learling code coding languages</h5>
-                            <div class="double_color d_flex">
-                                <h2 class="common_title_h2">Build Your Dream <b> TODAY </b></h2>     
-                            </div>
-                        </div>
-                        <div class="courses_container d_flex">
-                            <div class="courses_card d_flex" v-for="card in courses">
-                                
-                                <div class="img_container">
-                                    <div class="price d_flex">{{card.price}} </div>
-                                    <img class="courses_img" :src="card.picture" alt="">
-                                    
+                    <div class="bg_grey_round">
+                        <div class="main_courses_container d_flex">
+                            <div class="title_container_courses d_flex">
+                                <h5 class="common_title_h5"> Choose where you'd like to begin</h5>
+                                <div class="double_color d_flex">
+                                    <h2 class="common_title_h2">Latest Featured <b> Courses </b></h2>     
                                 </div>
-                                <div class="info_container d_flex">
-                                    <div>
-                                        <h5>  <img :src="card.authorImg" class="authorImg" alt="">{{card.author}} </h5>
+                            </div>
+                            <div class="courses_container d_flex">
+                                <div class="courses_card d_flex" v-for="card in courses">
+                                    
+                                    <div class="img_container">
+                                        <div class="price d_flex">{{card.price}} </div>
+                                        <img class="courses_img" :src="card.picture" alt="">
                                         
                                     </div>
-                                    <h3>{{card.title}} </h3>
-                                    <h6><i class="far fa-file"></i> {{card.lessons}} Lessons <i class="far fa-user"></i> {{card.students}} Students</h6>
+                                    <div class="info_container d_flex">
+                                        <div>
+                                            <h5>  <img :src="card.authorImg" class="authorImg" alt="">{{card.author}} </h5>
+                                            
+                                        </div>
+                                        <h3>{{card.title}} </h3>
+                                        <h6><i class="far fa-file"></i> {{card.lessons}} Lessons <i class="far fa-user"></i> {{card.students}} Students</h6>
+                                    </div>
                                 </div>
+                                
                             </div>
-                            
+                            <a href=""><button class="down_btn">View all courses <i class="fas fa-arrow-right"></i></button></a>
                         </div>
-                        <a href=""><button class="down_btn">View all courses <i class="fas fa-arrow-right"></i></button></a>
                     </div>
                 </section>
                 <!-- //courses section -->
                     
                 <!-- learning section -->
-                <section>
+                <section class="bg_white">
                     <div class="learning_container d_flex">
                         <div class="learning_card d_flex">
                             <div class="title_learn d_flex">
@@ -193,7 +198,7 @@
                 <!-- //learning section -->
 
                 <!-- events section -->
-                <section>
+                <section class="white_radius">
                     <div class="main_events_container d_flex">
                         <div class="title_container_events d_flex">
                             <h5 class="common_title_h5"> get in contact now</h5>
@@ -256,11 +261,10 @@
             <!-- main container of website -->
 
             <!-- footer -->
-            <footer>
-                <div class="footer_container d_flex">
-                    
-                    <div class="col_footer d_flex" v-for="info in footer">
-                        <ul class="d_flex">
+            <footer class="d_flex">
+                <div class="footer_container d-flex">
+                    <div class="column_footer d_flex">
+                        <ul class="d_flex col_footer" v-for="info in footer">
                             <li class="footer_title"><h3>{{info.title}}</h3></li>
                             <li class="footer_voice"><a href="">{{info.voice}}</a></li>
                             <li class="footer_voice"><a href="">{{info.voice2}}</a></li>
@@ -269,10 +273,17 @@
                             <li class="footer_voice"><a href="">{{info.voice5}}</a></li>
                             <li class="footer_voice"><a href="">{{info.voice6}}</a></li>
                         </ul>
+                        <div class="social_container d_flex">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-linkedin"></i>
+                        </div>
                     </div>
                 </div>
-                <h5></h5>
-                <i></i>
+                
+                <h5 id="copyright">&copy; 2020 Maxcoach. All Rights Reserved</h5>
+                
 
             </footer>
             <!-- footer -->
