@@ -280,7 +280,6 @@ input:focus {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
-
 }
 #img_quality{
     height: 490px;
@@ -664,7 +663,7 @@ input:focus {
     justify-content: space-around;
     position: relative;
     border-radius: 5px;
-    box-shadow: 0 0 10px 10px darkgrey;
+    box-shadow: 0 0 5px 5px lightgrey;
 }
 .dots{
     height: 60px;
@@ -674,11 +673,15 @@ input:focus {
     flex-direction: row;
     margin: auto;
     margin-bottom: 40px;
-    
+}
+.dots_element i{
+    border-radius: 50px;
+    box-shadow: 0 0 3px 3px lightgrey;
 }
 .dots_element:hover i{
     color: #22ad96;
     cursor: pointer;
+    box-shadow: 0 0 5px 5px lightgrey;
 }
 .testimonial_pic{
     border-radius: 50%;
