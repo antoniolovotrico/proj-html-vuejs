@@ -27,26 +27,32 @@
                 
                 <!-- navbar -->
                 <div class="navbar d_flex">
-                    <a href=""><img id="logo" src="assets/img/dark_logo.png" alt=""></a>
+                    <div class="logo"><a href=""><img id="logo" src="assets/img/dark_logo.png" alt=""></a></div>
 
                     <nav class="nav_menu d_flex">
-                        <ul class="menu_list d_flex" v-for="voice in menu">
-                            <li class="voice_menu"><a href="">{{voice.voice}}<i class="fas fa-chevron-down"></i></a></li>
-                            
+                        <ul class="menu_list d_flex" v-for="(link,i) in menu">
+                            <li class="voice_menu" :class="{active:link.hide}" @click="menuFunc(i)">{{link.voice}}<i class="fas fa-chevron-down" ></i></li>
+                            <li>
+                                <ul v-show="link.hide"class="submenu d_flex">
+                                    <li><a href="">{{link.sub1}} </a></li> 
+                                    <li><a href="">{{link.sub2}} </a></li> 
+                                </ul> 
+                            </li> 
                         </ul>
-
                     </nav>
-                    <a href="#" class="notification">
-                        <span><i class="fas fa-cart-plus cart"></i></span>
-                        <span class="badge">0</span>
-                      </a> 
-                    <a href=""><i class="far fa-user-circle"></i></a>
+                    <div class="navbar_right d_flex">
+                        <a href="#" class="notification">
+                            <span><i class="fas fa-cart-plus cart"></i></span>
+                            <span class="badge">0</span>
+                        </a> 
+                        <a href=""><i class="far fa-user-circle"></i></a>
 
-                    <form class="search">
-                        <input type="text" placeholder="Search...">
-                        <a href=""><i class="fas fa-search"></i></a> 
-                          
-                    </form>
+                        <form class="search">
+                            <input type="text" placeholder="Search...">
+                            <a href=""><i class="fas fa-search"></i></a> 
+                            
+                        </form>
+                    </div>
                 </div>
                 <!-- //navbar -->
 

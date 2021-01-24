@@ -16,12 +16,42 @@ let app = new Vue ({
     el:"#app",
     data:{
         menu:[
-            {voice:"home"},
-            {voice:"pages"},
-            {voice:"courses"},
-            {voice:"features"},
-            {voice:"blog"},
-            {voice:"shop"},
+            {
+                hide:false,
+                voice:"home",
+                sub1:"about us",
+                sub2:"story"  
+            },
+            {
+                hide:false,
+                voice:"pages",
+                sub1:"news",
+                sub2:"advice"
+            },
+            {
+                hide:false,
+                voice:"courses",
+                sub1:"basic",
+                sub2:"advanced"
+            },
+            {
+                hide:false,
+                voice:"features",
+                sub1:"platform",
+                sub2:"opportunity"
+            },
+            {
+                hide:false,
+                voice:"blog",
+                sub1:"daily",
+                sub2:"tricks"
+            },
+            {
+                hide:false,
+                voice:"shop",
+                sub1:"news",
+                sub2:"price"
+            },
         ],
         hero:[
             {
@@ -258,8 +288,20 @@ let app = new Vue ({
                 let shuffledTestimonials = shuffledAvatar.slice(0, 3);
                 console.log(shuffledTestimonials);
                 this.testimonials = shuffledTestimonials
+            })     
+        },
+        //Function to show on click on chevron that menu link child
+        menuFunc:function(i){
+            this.menu.forEach((element,a) =>{
+                if(a == i && element.hide == false){
+                    this.$set(this.menu[i],"hide",true);
+                }else if (a ==i && element.hide == true){
+                    this.$set(this.menu[i],"hide",false);
+                }else {
+                    this.$set(this.menu[a],"hide",false);
+                }
+
             })
-            
         },
         //Function to show paragraph in quality section on click on +
         showFunc:function(i){
